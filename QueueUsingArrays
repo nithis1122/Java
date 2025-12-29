@@ -1,0 +1,51 @@
+import java.util.*;
+class Queue
+{
+    int queue[]=new int[5];
+    int front=0,rear=-1;
+    void enqueue(int val)
+    {
+        if(rear==queue.length-1)
+        {
+        System.out.println("Queue is Full");
+        }else{
+            queue[++rear]=val;
+        System.out.println(val+ " enqueued");
+        }
+    }
+    void dequeue()
+    {
+        if(front>rear)
+        {
+            System.out.println("Queue is Empty");
+        
+        }
+        else{
+            System.out.println(queue[front]+" ");
+            front++;
+        }
+    }
+    void display()
+    {
+        if(front>rear)
+        {
+            System.out.println("Queue is Empty");
+            
+        }else 
+        {
+            for(int i=front;i<=rear;i++){
+            System.out.println(queue[i]+" ");
+        }
+    }
+    System.out.println();
+}}
+public class Main
+{
+	public static void main(String[] args) {
+	    Queue q=new Queue();
+	    q.enqueue(10);
+	    q.enqueue(20);
+	    q.dequeue();
+	    q.display();
+	}
+}
