@@ -1,0 +1,45 @@
+import java.util.*;
+
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class Stack {
+    Node top;
+
+    void push(int data) {
+        Node newNode = new Node(data);
+        if (top != null) {
+            newNode.next = top;
+        }
+        top = newNode;
+    }
+
+    void display() {
+        if (top == null) {
+            System.out.println("Stack is Empty");
+            return;
+        }
+        Node temp = top;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next; // Move to the next node
+        }
+        System.out.println();
+    }
+}
+
+public class Main {    public static void main(String[] args) {
+        Stack S = new Stack();
+        S.push(10);
+        S.push(20);
+        S.push(30);
+        S.display(); 
+    }
+}
