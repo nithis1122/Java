@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int fs=sc.nextInt(),fd=sc.nextInt(),ff=sc.nextInt();
+		int ss=sc.nextInt(),sd=sc.nextInt(),sf=sc.nextInt();
+		int as=sc.nextInt(),ad=sc.nextInt(),af=sc.nextInt();
+		
+		int fp=fs-(fs*fd/100)+ff;
+		int sp=ss-(ss*fd/100)+sf;
+		int ap=as-(as*ad/100)+af;
+		System.out.println("In flipkart: "+fp);
+		System.out.println("In Snapdeal: "+sp);
+		System.out.println("In Amazon: "+ap);
+		if(fp<=sp&&fp<=ap)
+		{
+		    System.out.println("choose flipkart");
+		}else if(sp<=fp &&sp<=ap)
+		{
+		    System.out.println("choose snapdeal");
+		}else{
+		    System.out.println("choose amazon");
+		}
+	}
+}
