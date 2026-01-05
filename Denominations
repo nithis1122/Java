@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int[]den={500,200,100,50,20,10,5,2,1};
+	int num=sc.nextInt();
+
+	for (int n:den)
+	{
+	   int count = 0;
+	   if (num >= n) { 
+                count = num / n; 
+                num %= n;
+                System.out.println(n+ " - " +count);
+	       
+	   }
+	   else{
+	       System.out.println(n+ " - " +count);	   }
+           sc.close();    
+    	}
+    }   
+    
+}
